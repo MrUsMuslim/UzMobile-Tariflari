@@ -5,7 +5,7 @@ from random import randint
 
 def get_tarifs(tarifs):
     """
-    This function returns length and names of tarifs
+    This function returns the length and names of tarifs
     """
 
     return [len(tarifs), [name for name in tarifs.keys()]]
@@ -41,7 +41,7 @@ def isDigit(number):
 
 def calculateMB(mb):
     """
-    This function calculates the avarage price of mb.
+    This function calculates the average price of MB.
     You can find it in tarifs module (user_tarif_info)
     """
     mb = int(mb)
@@ -79,7 +79,7 @@ def calculateSMS(sms):
 
 def calculateMinute(minute):
     """
-    This function calculates the avarage price of minute.
+    This function calculates the average price of minute.
     You can find it in tarifs module (user_tarif_info)
     """
     minute = int(minute)
@@ -104,7 +104,7 @@ def calculatePlatform(list):
 
 def calculateAll(data):
     """
-    Calculates the finanl price
+    Calculates the final price
     """
 
     minute = data['minute']
@@ -118,7 +118,7 @@ def calculateAll(data):
 
 def giveDiscount(summa):
     """
-    This function gives discount based on price.
+    This function gives discounts based on price.
     You can find it in tarifs module (user_tarif_info)
     """
     discount = 0
@@ -151,7 +151,7 @@ def turnTarif():
 
 def userData(data):
     """
-    The funcion returns information about user`s tarif
+    The function returns information about the user`s tarif
     """
     full_name = data['full_name']
     summa = giveDiscount(calculateAll(data))
@@ -164,11 +164,10 @@ def userData(data):
     return text
 
 
-# The funcion is called not only in Backend but also in Frontend. so the code will different from each other
 given_code = randint(1000, 10000)
 def checkUser(code):
     """
-    Checks if the user is not bot
+    Checks if the user is not a bot
     """
     if int(code) == given_code:
         return True
